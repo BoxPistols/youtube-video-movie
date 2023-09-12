@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>cate page</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js"></script>
+  </head>
+  <style>
+    /* Reset styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Global styles */
+    body {
+      font-family: sans-serif;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    nav li {
+      margin-left: 20px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    .categories {
+      margin-bottom: 20px;
+    }
+
+    .categories ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .categories li {
+      margin-bottom: 10px;
+    }
+
+    .categories a {
+      display: block;
+      padding: 10px;
+      background-color: #f4f4f4;
+      color: #333;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .categories a:hover {
+      background-color: #333;
+      color: #fff;
+    }
+
+    .gallery .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-gap: 20px;
+    }
+
+    .grid-item {
+      position: relative;
+    }
+
+    .grid-item img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    /* Masonry Grid styles */
+    .grid-sizer {
+      width: 100%;
+    }
+
+    /* Lightbox styles */
+    .lb-outerContainer {
+      background-color: rgba(0, 0, 0, 0.8) !important;
+    }
+
+    .lb-dataContainer {
+      color: #fff !important;
+    }
+
+    .lb-image {
+      max-width: 100% !important;
+      height: auto !important;
+      margin-top: 50px;
+    }
+
+    .lb-close {
+      background-color: #fff !important;
+      color: #333 !important;
+    }
+
+    /* Footer styles */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Responsive styles */
+    @media only screen and (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav li {
+        margin: 10px 0;
+      }
+
+      .categories ul {
+        display: flex;
+        overflow-x: auto;
+      }
+
+      .categories li {
+        margin-right: 10px;
+      }
+    }
+  </style>
+  <body>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/video.html">video</a>
+      <a href="/cate.html" aria-current="page">cate</a>
+    </nav>
+    <main>
+      <h1>My cate page</h1>
+
+      <div class="cate-container-area">
+        <section class="categories">
+          <h2>Categories</h2>
+          <ul>
+            <li><a href="#" data-category="all" class="active">All</a></li>
+            <li><a href="#">Landscape</a></li>
+            <li><a href="#">Portrait</a></li>
+            <li><a href="#">Nature</a></li>
+          </ul>
+        </section>
+
+        <section class="gallery">
+          <div class="grid-sizer"></div>
+          <!-- <div class="grid"> -->
+          <div class="grid-item landscape">
+            <a
+              href="http://placehold.jp/376x501.jpg"
+              data-lightbox="gallery"
+              data-title="Photo 1"
+            >
+              <img src="http://placehold.jp/376x201.jpg" alt="Photo 1" />
+            </a>
+          </div>
+          <div class="grid-item portrait">
+            <a
+              href="http://placehold.jp/376x202.jpg"
+              data-lightbox="gallery"
+              data-title="Photo 2"
+            >
+              <img src="http://placehold.jp/376x202.jpg" alt="Photo 2" />
+            </a>
+          </div>
+
+          <div class="grid-item nature">
+            <a
+              href="http://placehold.jp/376x203.jpg"
+              data-lightbox="gallery"
+              data-title="Photo 3"
+            >
+              <img src="http://placehold.jp/376x203.jpg" alt="Photo 3" />
+            </a>
+          </div>
+          <div class="grid-item portrait">
+            <a
+              href="http://placehold.jp/376x204.jpg"
+              data-lightbox="gallery"
+              data-title="Photo 4"
+            >
+              <img src="http://placehold.jp/376x204.jpg" alt="Photo 4" />
+            </a>
+          </div>
+          <div class="grid-item portrait">
+            <a
+              href="http://placehold.jp/376x205.jpg"
+              data-lightbox="gallery"
+              data-title="Photo 5"
+            >
+              <img src="http://placehold.jp/376x205.jpg" alt="Photo 5" />
+            </a>
+          </div>
+          <!-- <div class="grid-item portrait">
+            <a
+              href="http://placehold.jp/376x206.jpg"
+              data-lightbox="gallery"
+              data-title="Photo 6"
+            >
+              <img src="http://placehold.jp/376x206.jpg" alt="Photo 6" />
+            </a>
+          </div>
+          <div class="grid-item portrait">
+            <a
+              href="http://placehold.jp/376x207.jpg"
+              data-lightbox="gallery"
+              data-title="Photo 7"
+            >
+              <img src="http://placehold.jp/376x207.jpg" alt="Photo 7" />
+            </a>
+          </div>
+          <div class="grid-item portrait">
+            <a
+              href="http://placehold.jp/376x208.jpg"
+              data-lightbox="gallery"
+              data-title="Photo 8"
+            >
+              <img src="http://placehold.jp/376x208.jpg" alt="Photo 8" />
+            </a>
+          </div>
+          <div class="grid-item portrait">
+            <a
+              href="http://placehold.jp/376x209.jpg"
+              data-lightbox="gallery"
+              data-title="Photo 9"
+            >
+              <img src="http://placehold.jp/376x209.jpg" alt="Photo 9" />
+            </a>
+          </div> -->
+          <!-- </div> -->
+        </section>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2023 Photographer Portfolio. All rights reserved.</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        // Initialize Masonry
+        var $grid = $('.gallery').masonry({
+          itemSelector: '.grid-item',
+          columnWidth: '.grid-sizer',
+          percentPosition: true,
+        });
+        // Layout Masonry after each image loads
+        $grid.imagesLoaded().progress(function () {
+          $grid.masonry('layout');
+        });
+        // Filter images by category
+        $('.categories a').click(function () {
+          var category = $(this).data('category');
+          $('.categories a').removeClass('active');
+          $(this).addClass('active');
+          if (category === 'all') {
+            $grid.masonry({ filter: '*' });
+          } else {
+            $grid.masonry({ filter: '.' + category });
+          }
+          $grid.masonry('layout');
+        });
+        // Load YouTube video player
+        var player;
+        function onYouTubeIframeAPIReady() {
+          player = new YT.Player('player', {
+            height: '360',
+            width: '640',
+            videoId: 'VIDEO_ID',
+            playerVars: {
+              autoplay: 0,
+              controls: 1,
+              showinfo: 0,
+              rel: 0,
+              fs: 0,
+              modestbranding: 1,
+              iv_load_policy: 3,
+            },
+          });
+        }
+        var tag = document.createElement('script');
+        tag.src = 'https://www.youtube.com/iframe_api';
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+      });
+    </script>
+  </body>
+</html>
